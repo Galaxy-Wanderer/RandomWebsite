@@ -19,10 +19,10 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
                 <div class="burger">
@@ -77,9 +77,9 @@
                     <img src="./images/programmer.svg" alt="programmer">
                 </div>
                 <div class="stats">
-                    <h1>Master in <span>7 languages</span></h1>
-                    <h1>Built up <span>20 websites</span></h1>
-                    <h1>Worked for <span>100 costumers</span></h1>
+                    <h1><span data-target="10000" class="counter">0</span>Twitter followers</h1>
+                    <h1><span data-target="8000" class="counter">0</span>Github stars</h1>
+                    <h1><span data-target="4000" class="counter">0</span>Linkedin links</h1>
                 </div>
             </section>
             <section id="about">
@@ -88,6 +88,48 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum repellat ipsa ut adipisci sapiente tenetur. Deserunt tempora nulla laboriosam rerum expedita explicabo animi dolore ea, illo sint veniam, aperiam enim veritatis itaque dicta. Impedit, voluptatum!</p>
                 </div>
                 <img src="./images/mernstackdev.svg" alt="mern stack">
+            </section>
+            <section id="projects">
+                <h1>My projects</h1>
+                <div class="projects">
+                    <div class="project">
+                        <img src="./images/firstproject.png" alt="my first project">
+                        <div class="project-content">
+                            <h3>The Web Dev</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam quaerat! Quia quas aliquid nihil necessitatibus corrupti hic dolorem, a architecto fugiat aut sequi quidem.</p>
+                            <a href="https://galaxy-wanderer.github.io/Website-for-portofolio" target="_blank">View project</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./images/jstodolist.png" alt="javascript todolist">
+                        <div class="project-content">
+                            <h3>Js todo list</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam quaerat! Quia quas aliquid nihil necessitatibus corrupti hic dolorem, a architecto fugiat aut sequi quidem.</p>
+                            <a href="https://javascript-todolist.netlify.com/" target="_blank">View project</a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./images/firstproject.png" alt="my first project">
+                        <div class="project-content">
+                            <h3>The Web Dev</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam quaerat! Quia quas aliquid nihil necessitatibus corrupti hic dolorem, a architecto fugiat aut sequi quidem.</p>
+                            <a href="https://galaxy-wanderer.github.io/Website-for-portofolio" target="_blank">View project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <form>
+                    <h1>Contact me</h1>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" autocomplete="off" placeholder="Name..." required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="off" placeholder="Email..." required>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Message..." autocomplete="off" required></textarea>
+                    <input type="submit" value="Send message" id="submit">
+                </form>
+                <img class="contact-image" src="./images/contact.svg" alt="contact">
             </section>
         </main>
         <script src="./script.js"></script>
