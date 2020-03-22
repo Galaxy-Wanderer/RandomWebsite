@@ -82,7 +82,7 @@ nav h1 {
 
 /* home section */
 #home {
-    margin-top: 10vh;
+    margin: 10vh 0vh;
 }
 .cards {
     display: flex;
@@ -96,7 +96,7 @@ nav h1 {
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .card:hover {
-    transform: translateY(-5%);
+    transform: translateY(-3%);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 .card img {
@@ -121,7 +121,7 @@ nav h1 {
     display: flex;
     align-items: center;
     padding: 3rem;
-    margin-top: 7vh;
+    margin: 10vh 0vh;
 }
 .home-text {
     flex: 1;
@@ -161,7 +161,7 @@ nav h1 {
 /* about section */
 #about {
     display: flex;
-    margin: 7rem 2rem;
+    margin: 20vh 2rem;
     align-items: center;
 }
 #about img {
@@ -179,6 +179,7 @@ nav h1 {
 /* projects section*/
 #projects {
     text-align: center;
+    margin: 7vh 0vh 10vh 0vh;
 }
 #projects h1 {
     font-size: calc(2vw + 1rem);
@@ -200,7 +201,7 @@ nav h1 {
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .project:hover {
-    transform: translateY(-5%);
+    transform: translateY(-3%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 .project img {
@@ -224,7 +225,7 @@ nav h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 10vh;
 }
 form {
     display: flex;
@@ -242,11 +243,13 @@ form textarea {
     width: 75%;
     height: 7rem;
     padding: 10px;
+    border: 2px solid black;
 }
 form input {
     padding: 10px;
     width: 75%;
     margin-bottom: 1rem;
+    border: 2px solid black;
 }
 #submit {
     margin-top: 1rem;
@@ -257,7 +260,62 @@ form input {
 }
 .contact-image {
     width: 40%;
+    padding: 1rem;
 }
+
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #005c97;
+    color: white;
+    padding: 1rem 5vw;
+}
+footer ul {
+    display: flex;
+    list-style-type: none;
+}
+footer ul li {
+    margin: 0rem 1vw;
+    font-size: calc(0.5vw + 0.75rem);
+}
+
+/* animations */
+.card, .home-text, .home-content img, .about-content, #about img, .project, form, .contact-image {
+    opacity: 0;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes move-right {
+    from {
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes move-up {
+    from {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 /* media queries */
 @media screen and (max-width: 1100px) {
     /* cards */
@@ -339,6 +397,9 @@ form input {
     form textarea, form input {
         width: 100%;
     }
+    .card, .home-text, .home-content img, .about-content, #about img, .project, form, .contact-image {
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 800px) {
     /* burger nav */
@@ -351,7 +412,7 @@ form input {
         flex-direction: column;
         top: 0;
         left: 100%;
-        width: 50vw;
+        width: 100vw;
         height: 100vh;
         padding-top: 10vh;
         line-height: 20vh;
@@ -364,6 +425,7 @@ form input {
     .links-active {
         transform: translateX(-100%);
     }
+    
     .links a {
         color: white;
         text-decoration: none;
